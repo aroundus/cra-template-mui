@@ -5,11 +5,21 @@
   "scripts": {
     "build": "react-app-rewired build",
     "eject": "react-app-rewired eject",
+    "format": "npx prettier --write 'src/**/*.{js,jsx}'",
     "lint": "npx eslint --fix src/**/*.{js,jsx} --no-warn-ignored",
     "lint:style": "npx stylelint --fix --ignore-path .gitignore '**/*.(js|jsx)'",
-    "format": "npx prettier --write 'src/**/*.{js,jsx}'",
     "start": "react-app-rewired start",
     "test": "react-app-rewired test"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx}": [
+      "npm run lint:style"
+    ]
   },
   "browserslist": {
     "production": [
@@ -48,6 +58,8 @@
     "eslint-plugin-promise": "^6.1.1",
     "eslint-plugin-react": "^7.34.1",
     "globals": "^15.2.0",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.2",
     "prettier": "3.2.5",
     "react-app-rewire-alias": "^1.1.7",
     "react-app-rewired": "^2.2.1",
