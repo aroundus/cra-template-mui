@@ -14,6 +14,7 @@ export default function Home() {
     '&': {
       color: isMobile ? colors.common.white : colors.grey[300],
     },
+
     '&:hover': {
       color: colors.common.white,
     },

@@ -6,6 +6,7 @@
     "build": "react-app-rewired build",
     "eject": "react-app-rewired eject",
     "lint": "npx eslint --fix src/**/*.{js,jsx} --no-warn-ignored",
+    "lint:style": "npx stylelint --fix --ignore-path .gitignore '**/*.(js|jsx)'",
     "format": "npx prettier --write 'src/**/*.{js,jsx}'",
     "start": "react-app-rewired start",
     "test": "react-app-rewired test"
