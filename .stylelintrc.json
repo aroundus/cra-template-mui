@@ -1,0 +1,10 @@
+{
+  "extends": [
+    "stylelint-config-standard",
+    "stylelint-styled-components-order"
+  ],
+  "rules": {
+    "function-name-case": null,
+    "value-keyword-case": null
+  }
+}
