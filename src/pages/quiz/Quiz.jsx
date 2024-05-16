@@ -1,8 +1,10 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import { Box, Container, Link, List, ListItem, Typography } from '@mui/material';
+import { Box, Container, Link, ListItem, Typography } from '@mui/material';
 
 import useIntersectionObserver from '@/helpers/hooks/useIntersectionObserver';
 import quizService from '@/services/quiz';
+
+import QuizList from './components/QuizList';
 
 export default function Quiz() {
   const intersectionRef = useRef(null);
@@ -48,24 +50,10 @@ export default function Quiz() {
           Home
         </Link>
       </Box>
-      <List>
-        {quizzes.map((quiz, index) => (
-          <ListItem
-            alignItems="flex-start"
-            display="flex"
-            divider
-            key={quiz.id}
-            sx={{ flexDirection: 'column', py: 12 }}
-          >
-            <Typography>{index + 1}.</Typography>
-            <Typography>
-              {quiz.answers[0].isCorrect ? '🟢' : '❌'} {quiz.answers[0].text}
-            </Typography>
-            <Typography>
-              {quiz.answers[1].isCorrect ? '🟢' : '❌'} {quiz.answers[1].text}
-            </Typography>
-          </ListItem>
-        ))}
+      <QuizList
+        hasNextPage={hasNextPage}
+        quizzes={quizzes}
+      >
         {!hasNextPage && (
           <ListItem
             alignItems="flex-start"
@@ -75,7 +63,7 @@ export default function Quiz() {
           </ListItem>
         )}
         <div ref={intersectionRef} />
-      </List>
+      </QuizList>
     </Container>
   );
 }

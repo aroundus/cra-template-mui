@@ -3,7 +3,7 @@ import { Navigate, Route, Routes, useLocation } from 'react-router-dom';
 import Layout from '@/components/Layout';
 import Home from '@/pages/Home';
 import Example from '@/pages/Example';
-import Quiz from '@/pages/Quiz';
+import Quiz from '@/pages/quiz';
 import User from '@/pages/User';
 
 export default function Router() {
