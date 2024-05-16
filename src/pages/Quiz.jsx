@@ -22,10 +22,8 @@ export default function Quiz() {
   }, [pageIndex]);
 
   useEffect(() => {
-    if (hasNextPage) {
-      if (intersectionObserver?.isIntersecting) {
-        setPageIndex((prevPageIndex) => (prevPageIndex += 1));
-      }
+    if (hasNextPage && intersectionObserver?.isIntersecting) {
+      setPageIndex((prevPageIndex) => (prevPageIndex += 1));
     }
   }, [intersectionObserver, hasNextPage]);
 
