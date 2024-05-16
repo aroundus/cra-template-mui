@@ -5,8 +5,8 @@ import useIntersectionObserver from '@/helpers/hooks/useIntersectionObserver';
 import quizService from '@/services/quiz';
 
 export default function Quiz() {
-  const ref = useRef(null);
-  const intersectionRef = useIntersectionObserver({ ref, options: {} });
+  const intersectionRef = useRef(null);
+  const intersectionObserver = useIntersectionObserver({ ref: intersectionRef, options: {} });
 
   const [quizzes, setQuizzes] = useState([]);
   const [page, setPage] = useState({});
@@ -23,11 +23,11 @@ export default function Quiz() {
 
   useEffect(() => {
     if (hasNextPage) {
-      if (intersectionRef?.isIntersecting) {
+      if (intersectionObserver?.isIntersecting) {
         setPageIndex((prevPageIndex) => (prevPageIndex += 1));
       }
     }
-  }, [intersectionRef, hasNextPage]);
+  }, [intersectionObserver, hasNextPage]);
 
   useEffect(() => {
     if (hasNextPage) {
@@ -76,7 +76,7 @@ export default function Quiz() {
             <Typography>✔️ 모든 목록을 다 읽었어요.</Typography>
           </ListItem>
         )}
-        <div ref={ref} />
+        <div ref={intersectionRef} />
       </List>
     </Container>
   );
