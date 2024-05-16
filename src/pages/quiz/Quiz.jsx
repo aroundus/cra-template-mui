@@ -43,11 +43,11 @@ export default function Quiz() {
       <Typography>총 {page.totalElementCount}개</Typography>
       <Box>
         <Link
-          href="/"
+          href="main"
           underline="always"
           variant="body2"
         >
-          Home
+          Main
         </Link>
       </Box>
       <QuizList

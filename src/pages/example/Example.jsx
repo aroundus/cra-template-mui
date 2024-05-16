@@ -19,11 +19,11 @@ export default function Example() {
       <Box>Example</Box>
       <Box>
         <Link
-          href="/"
+          href="main"
           underline="always"
           variant="body2"
         >
-          Home
+          Main
         </Link>
       </Box>
       <ImageList>

@@ -15,11 +15,11 @@ export default function User() {
     <Container maxWidth="sm">
       <Box sx={{ p: 4 }}>
         <Link
-          href="/"
+          href="main"
           underline="always"
           variant="body2"
         >
-          Home
+          Main
         </Link>
       </Box>
       <Box sx={{ p: 4 }}>

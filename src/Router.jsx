@@ -1,10 +1,10 @@
 import { Navigate, Route, Routes, useLocation } from 'react-router-dom';
 
 import Layout from '@/components/Layout';
-import Home from '@/pages/Home';
-import Example from '@/pages/Example';
+import Example from '@/pages/example';
+import Main from '@/pages/main';
 import Quiz from '@/pages/quiz';
-import User from '@/pages/User';
+import User from '@/pages/user';
 
 export default function Router() {
   const location = useLocation();
@@ -14,8 +14,8 @@ export default function Router() {
     <Routes>
       <Route element={<Layout />}>
         <Route
-          element={<Home />}
-          index
+          element={<Main />}
+          path="main"
         />
         <Route
           element={<Example />}
@@ -30,7 +30,7 @@ export default function Router() {
           path="user"
         />
         <Route
-          element={<Navigate to={{ pathname: '/', search }} />}
+          element={<Navigate to={{ pathname: 'main', search }} />}
           path="*"
         />
       </Route>
