@@ -29,10 +29,6 @@ export default function Router() {
           element={<User />}
           path="user"
         />
-        <Route
-          element={<Navigate to={{ pathname: 'main', search }} />}
-          path="*"
-        />
       </Route>
     </Routes>
   );
