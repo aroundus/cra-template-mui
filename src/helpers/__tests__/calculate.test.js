@@ -1,6 +1,6 @@
 import { add, divide, multiply, subtract } from '../calculate';
 
-describe('add', () => {
+describe('더하기', () => {
   it.each([
     {
       received: { a: 1, b: 1 },
@@ -16,7 +16,7 @@ describe('add', () => {
   });
 });
 
-describe('subtract', () => {
+describe('빼기', () => {
   it.each([
     {
       received: { a: 4, b: 2 },
@@ -32,7 +32,7 @@ describe('subtract', () => {
   });
 });
 
-describe('multiply', () => {
+describe('곱하기', () => {
   it.each([
     {
       received: { a: 4, b: 2 },
@@ -48,7 +48,7 @@ describe('multiply', () => {
   });
 });
 
-describe('divide', () => {
+describe('나누기', () => {
   it.each([
     {
       received: { a: 4, b: 2 },

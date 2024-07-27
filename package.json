@@ -11,6 +11,13 @@
     "start": "react-app-rewired start",
     "test": "react-app-rewired test"
   },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/helpers/*.js",
+      "src/**/helpers/*.js",
+      "!<rootDir>/node_modules/"
+    ]
+  },
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
