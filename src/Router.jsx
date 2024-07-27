@@ -1,10 +1,10 @@
 import { Navigate, Route, Routes } from 'react-router-dom';
 
-import Layout from '@/components/Layout';
-import Example from '@/pages/example';
-import Main from '@/pages/main';
-import Quiz from '@/pages/quiz';
-import User from '@/pages/user';
+import { Layout } from '@/components';
+import { Example } from '@/pages/example';
+import { Main } from '@/pages/main';
+import { Quiz } from '@/pages/quiz';
+import { User } from '@/pages/user';
 
 export default function Router() {
   return (

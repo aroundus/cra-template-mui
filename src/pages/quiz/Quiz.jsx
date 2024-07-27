@@ -1,12 +1,12 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { Box, Container, Link, ListItem, Typography } from '@mui/material';
 
-import useIntersectionObserver from '@/helpers/hooks/useIntersectionObserver';
-import quizService from '@/services/quiz';
+import { useIntersectionObserver } from '@/helpers/hooks';
+import * as quizService from '@/services/quiz';
 
-import QuizList from './components/QuizList';
+import { QuizList } from './components/QuizList';
 
-export default function Quiz() {
+export function Quiz() {
   const intersectionRef = useRef(null);
   const intersectionObserver = useIntersectionObserver({ ref: intersectionRef, options: {} });
 

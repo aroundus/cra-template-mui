@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 
 import { userActions } from '@/states/features';
 
-export default function User() {
+export function User() {
   const dispatch = useDispatch();
   const { isLoggedIn } = useSelector((state) => state.user);
 

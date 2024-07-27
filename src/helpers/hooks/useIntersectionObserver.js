@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 /**
  * IntersectionObserver API를 사용하여 특정 DOM 요소의 가시성 변화를 감지합니다.
  */
-export default function useIntersectionObserver({ ref, options: { threshold = 0.2, root = null, rootMargin = '0%' } }) {
+export function useIntersectionObserver({ ref, options: { threshold = 0.2, root = null, rootMargin = '0%' } }) {
   const [entry, setEntry] = useState();
 
   const updateEntry = (entries) => {

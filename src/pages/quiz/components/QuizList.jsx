@@ -1,6 +1,6 @@
 import { List, ListItem, Typography } from '@mui/material';
 
-export default function QuizList({ children, quizzes = [] }) {
+export function QuizList({ children, quizzes = [] }) {
   return (
     <List>
       {quizzes.map((quiz, index) => (

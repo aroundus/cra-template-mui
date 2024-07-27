@@ -4,7 +4,7 @@ import { useTheme } from '@mui/material/styles';
 import example01Image from '@/assets/images/example-01.jpg';
 import example02Image from '@/assets/images/example-02.jpg';
 
-export default function Example() {
+export function Example() {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
 

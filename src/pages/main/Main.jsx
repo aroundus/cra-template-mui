@@ -2,7 +2,7 @@ import { Box, Button, colors, Container, Link, Typography, useMediaQuery } from 
 import { styled, useTheme } from '@mui/material/styles';
 import { createUseStyles } from 'react-jss';
 
-export default function Main() {
+export function Main() {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 

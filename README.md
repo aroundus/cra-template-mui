@@ -1,6 +1,6 @@
 # CRA Template MUI
 
-[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Faroundus%2Faroundus.github.io&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=Hits&edge_flat=false)](https://hits.seeyoufarm.com)
+[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Faroundus%2Fcra-template-mui&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)
 ![React](https://img.shields.io/badge/React-20232A?logo=react&logoColor=61DAFB)
 ![Material UI](https://img.shields.io/badge/MUI-007FFF?logo=mui&logoColor=white)
 ![Redux Toolkit](https://img.shields.io/badge/Redux_Toolkit-764ABC?logo=redux&logoColor=white)
@@ -100,18 +100,19 @@ JavaScript 프로젝트에서 사용하는 설정 파일입니다. 프로젝트�
 ```json
 "paths": {
   "@/*": ["src/*"]
+}
 ```
 
 모듈을 다른 프로젝트로 옮기거나 재사용할 때 상대 경로를 사용하면 경로를 일일이 수정해 주어야 하지만, 별칭을 사용하면 특정 경로에 종속되지 않기 때문에 신경쓰지 않아도 됩니다.
 
 ```jsx
 // AS IS (상대 경로 사용)
-import useIntersectionObserver from '../../helpers/hooks/useIntersectionObserver';
-import quizService from '../../services/quiz';
+import { useIntersectionObserver } from '../../helpers/hooks';
+import * as quizService from '../../services/quiz';
 
 // TO BE (별칭 사용)
-import useIntersectionObserver from '@/helpers/hooks/useIntersectionObserver';
-import quizService from '@/services/quiz';
+import { useIntersectionObserver } from '@/helpers/hooks';
+import * as quizService from '@/services/quiz';
 ```
 
 ### [Router.jsx](./src/Router.jsx)

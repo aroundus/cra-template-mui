@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-async function getQuizzes(pageIndex = 0, pageSize = 5) {
+export async function getQuizzes(pageIndex = 0, pageSize = 5) {
   const { data } = await axios.get('/quizzes');
   const startIndex = pageIndex * pageSize;
 
@@ -14,7 +14,3 @@ async function getQuizzes(pageIndex = 0, pageSize = 5) {
     data: data.slice(startIndex, startIndex + pageSize),
   };
 }
-
-export default {
-  getQuizzes,
-};

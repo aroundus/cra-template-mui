@@ -1,8 +1,8 @@
 import { Outlet } from 'react-router-dom';
 
-import ThemeProvider from './ThemeProvider';
+import { ThemeProvider } from './ThemeProvider';
 
-export default function Layout() {
+export function Layout() {
   return (
     <ThemeProvider>
       <main>

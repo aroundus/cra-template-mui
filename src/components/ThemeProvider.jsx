@@ -7,7 +7,7 @@ import { createTheme, ThemeProvider as MUIThemeProvider } from '@mui/material/st
  * 사용자 정의 테마 Context API
  * @see https://mui.com/material-ui/customization/theming
  */
-export default function ThemeProvider({ children }) {
+export function ThemeProvider({ children }) {
   return (
     <MUIThemeProvider theme={theme}>
       <CSSBaseline />
