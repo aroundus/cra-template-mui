@@ -1,6 +1,6 @@
 # CRA Template MUI
 
-[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Faroundus%2Fcra-template-mui&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)
+[![hits](https://myhits.vercel.app/api/hit/https%3A%2F%2Fgithub.com%2Faroundus%2Fcra-template-mui?color=green&label=hits&size=small)](https://myhits.vercel.app)
 ![React](https://img.shields.io/badge/React-20232A?logo=react&logoColor=61DAFB)
 ![Material UI](https://img.shields.io/badge/MUI-007FFF?logo=mui&logoColor=white)
 ![Redux Toolkit](https://img.shields.io/badge/Redux_Toolkit-764ABC?logo=redux&logoColor=white)
